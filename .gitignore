@@ -1,0 +1,9 @@
+# Maven
+target/
+
+# Eclipse project file
+.settings/
+.classpath
+.project
+
+resources/parsingOutput.txt
