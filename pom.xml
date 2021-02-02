@@ -58,12 +58,6 @@
 							</excludes>
 						</filter>
 					</filters>
-					<relocations>
-						<relocation>
-							<pattern>com.fasterxml.jackson</pattern>
-							<shadedPattern>it.corvallis.jedi.dmp.vendor.com.fasterxml.jackson</shadedPattern>
-						</relocation>
-					</relocations>
 				</configuration>
 				<executions>
 					<execution>
@@ -83,35 +77,6 @@
 
 		</plugins>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>nexus-openlab</id>
-			<name>OpenLab Releases</name>
-			<url>http://172.31.31.177:8081/repository/corvallis-openlab/</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>nexus-openlab-snapshot</id>
-			<name>OpenLab Snapshots</name>
-			<url>http://172.31.31.177:8081/repository/corvallis-openlab-snapshot/</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>confluent</id>
-			<name>Confluent Releases</name>
-			<url>https://packages.confluent.io/maven/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 
 	<dependencies>
 		<!--
