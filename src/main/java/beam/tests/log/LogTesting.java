@@ -1,5 +1,4 @@
 package beam.tests.log;
-import java.net.UnknownHostException;
 
 import javax.annotation.Nullable;
 
@@ -11,16 +10,11 @@ import org.apache.beam.sdk.coders.StringUtf8Coder;
 import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.transforms.Create;
-//import org.apache.beam.sdk.extensions.jackson.*;
-//import org.apache.beam.sdk.extensions.jackson.ParseJsons.ParseJsonsWithFailures;
 import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.ParDo;
-//import org.apache.beam.sdk.schemas.Schema;
 import org.apache.beam.sdk.values.PCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-//mvn compile exec:java -Dexec.mainClass=BeamTest1 -Dexec.args="--runner=SparkRunner" -Pspark-runner
 
 public class LogTesting {
 	
@@ -61,7 +55,7 @@ public class LogTesting {
 		logger.info("Pipeline executed in {}", watch.toString());
 	}
 
-	public static void main(String[] args) throws UnknownHostException {
+	public static void main(String[] args) {
 		logger.info("Create a " + LogTesting.class.getName() + " instance");
 		PipelineOptions options = PipelineOptionsFactory.create();
 		options.setRunner(SparkRunner.class);
