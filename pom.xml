@@ -14,6 +14,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 
 		<beam.version>2.27.0</beam.version>
+		<kafka.version>2.4.1</kafka.version>
 
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 		<maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
@@ -117,7 +118,7 @@
 			<version>${org.apache.logging.log4j.version}</version>
 			<scope>test</scope>
 		</dependency>
-
+		
 		<!--
 		###
 		### Testing
@@ -145,6 +146,18 @@
 			<groupId>org.apache.beam</groupId>
 			<artifactId>beam-sdks-java-core</artifactId>
 			<version>${beam.version}</version>
+		</dependency>
+		
+		<!-- Kafka access -->
+		<dependency>
+			<groupId>org.apache.beam</groupId>
+			<artifactId>beam-sdks-java-io-kafka</artifactId>
+			<version>${beam.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
 		</dependency>
 		
 		<!-- Default Beam runner (direct) used only for testing -->
